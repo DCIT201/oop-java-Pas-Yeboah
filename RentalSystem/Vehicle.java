@@ -1,5 +1,6 @@
+package RentalSystem;
 
-    public abstract class Vehicle {
+public abstract class Vehicle {
         private String vehicleId;
         private String model;
         private double baseRentalRate;

@@ -1,29 +1,29 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Ev761u1o)
 # OOP-JAVA(DCIT 201 - Graded Assignment)
-# Advanced Vehicle Rental Management System
+# Advanced RentalSystem.Vehicle Rental Management System
 
 ## Assignment Objective
-Design a comprehensive Vehicle Rental Management System that demonstrates **ALL** Object-Oriented Programming (OOP) Principles:
+Design a comprehensive RentalSystem.Vehicle Rental Management System that demonstrates **ALL** Object-Oriented Programming (OOP) Principles:
 - Encapsulation
 - Inheritance
 - Polymorphism
 - Abstraction
 - Composition
 
-## Problem Domain: Vehicle Rental Management System
+## Problem Domain: RentalSystem.Vehicle Rental Management System
 
 ### Core Requirements
 
 #### 1. Abstraction Principle
-Create an abstract base class `Vehicle` with the following abstract methods:
+Create an abstract base class `RentalSystem.Vehicle` with the following abstract methods:
 - `calculateRentalCost(int days)`
 - `isAvailableForRental()`
 
 #### 2. Inheritance Hierarchy
-Implement concrete vehicle classes that inherit from `Vehicle`:
-- `Car` (extends Vehicle)
-- `Motorcycle` (extends Vehicle)
-- `Truck` (extends Vehicle)
+Implement concrete vehicle classes that inherit from `RentalSystem.Vehicle`:
+- `RentalSystem.Car` (extends RentalSystem.Vehicle)
+- `RentalSystem.Motorcycle` (extends RentalSystem.Vehicle)
+- `Truck` (extends RentalSystem.Vehicle)
 
 Each vehicle type must have unique rental characteristics:
 - Different base rental rates
@@ -39,23 +39,23 @@ Each vehicle class must:
 
 #### 4. Polymorphism Implementation
 Create interfaces and method overriding:
-- `Rentable` interface with methods:
-  - `rent(Customer customer, int days)`
+- `RentalSystem.Rentable` interface with methods:
+  - `rent(RentalSystem.Customer customer, int days)`
   - `returnVehicle()`
 - Override methods in each vehicle class
 - Demonstrate method overloading and overriding
 
 #### 5. Composition
 Design supporting classes:
-- `Customer`
-- `RentalAgency`
+- `RentalSystem.Customer`
+- `RentalSystem.RentalAgency`
 - `RentalTransaction`
 
 ### Detailed Class Requirements
 
-#### Vehicle (Abstract Class)
+#### RentalSystem.Vehicle (Abstract Class)
 ```java
-public abstract class Vehicle {
+public abstract class RentalSystem.Vehicle {
     // Private encapsulated fields
     private String vehicleId;
     private String model;
@@ -68,18 +68,18 @@ public abstract class Vehicle {
 }
 ```
 
-#### Vehicle Specific Classes
+#### RentalSystem.Vehicle Specific Classes
 Each vehicle class must implement unique:
 - Rental cost calculations
 - Availability checks
 - Special features
 
-#### Customer Class
+#### RentalSystem.Customer Class
 - Manage customer rental history
 - Track current rentals
 - Implement rental eligibility checks
 
-#### RentalAgency Class
+#### RentalSystem.RentalAgency Class
 - Manage vehicle fleet
 - Process rentals
 - Generate reports

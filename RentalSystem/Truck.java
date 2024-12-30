@@ -1,3 +1,5 @@
+package RentalSystem;
+
 public class Truck extends Vehicle {
     private double loadCapacity;
 
@@ -8,7 +10,6 @@ public class Truck extends Vehicle {
 
     @Override
     public double calculateRentalCost(int days) {
-        // Example: base rate + surcharge for load capacity
         return getBaseRentalRate() * days + (loadCapacity * 2);
     }
 

@@ -1,3 +1,5 @@
+package RentalSystem;
+
 public class Motorcycle extends Vehicle {
     private boolean hasSidecar;
 
@@ -8,7 +10,6 @@ public class Motorcycle extends Vehicle {
 
     @Override
     public double calculateRentalCost(int days) {
-        // Example: base rate + surcharge if has a sidecar
         return getBaseRentalRate() * days + (hasSidecar ? 10 : 0);
     }
 

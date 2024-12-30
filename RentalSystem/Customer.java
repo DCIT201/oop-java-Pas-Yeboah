@@ -1,3 +1,5 @@
+package RentalSystem;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Customer {
@@ -9,18 +11,21 @@ public class Customer {
     public Customer(String customerId, String name) {
         this.customerId = customerId;
         this.name = name;
-    }
+        Customer customer = this;
+        customer.rentalHistory = new ArrayList<>();
+        this.rentalHistory = new ArrayList<>();
+        }
 
-    public void rentVehicle(Vehicle vehicle, int days) {
+
+    public String rentVehicle(Vehicle vehicle, int days) {
         if (vehicle.isAvailableForRental()) {
             vehicle.setAvailable(false);
             this.currentRental = vehicle;
             rentalHistory.add(vehicle);
-            System.out.println("Vehicle rented: " + vehicle.getModel());
+            System.out.println(" Vehicle rented: " + vehicle.getModel());
         } else {
             System.out.println("Vehicle is not available for rental.");
         }
-    }
 
     public void returnVehicle() {
         if (currentRental != null) {
@@ -49,13 +54,15 @@ public class Customer {
         this.name = name;
     }
 
-    public List<Vehicle> getRentalHistory() {
-        return rentalHistory;
+    public void addRental(Vehicle currentRental) {
+        this.currentRental = currentRental;
+        rentalHistory.add(currentRental);
     }
+        public List<Vehicle> getRentalHistory() {
+            return rentalHistory;
+        }
 
-    public void setRentalHistory(List<Vehicle> rentalHistory) {
-        this.rentalHistory = rentalHistory;
-    }
+
 }
 
 

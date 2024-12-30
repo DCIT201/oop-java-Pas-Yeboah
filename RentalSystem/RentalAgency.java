@@ -1,3 +1,5 @@
+package RentalSystem;
+
 import java.util.List;
 
 public class RentalAgency {
